@@ -21,7 +21,7 @@ let app = (function() {
     function message(message, type) {
         let msg = {message, type, time: time.now()};
         storage.addMessage(msg);
-        conversation.add(msg);
+        conversation.addMessage(msg);
     }
     return {
         init,
