@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div>
+        <button onclick="app.minimize()">-</button>
+    </div>
+
+    <div>
+        <div data-conversation-list></div>
+        <template data-conversation-question>
+            <div>
+                <div data-val="time"></div>
+                <div data-val="message"></div>
+            </div>
+        </template>
+        <template data-conversation-answer>
+            <div>
+                <div data-val="time"></div>
+                <div data-val="message" data-val-mode="html"></div>
+            </div>
+        </template>
+    </div>
+
+    <div>
+        <div data-loading-off>
+            <input type="text" data-input placeholder="Type a message">
+            <button onclick="input.submit()">►</button>
+        </div>
+        <div data-loading-on>
+            <input type="text" disabled="disabled">
+            <button>...</button>
+        </div>
+    </div>
+
+    <script>
+        app.init();
+    </script>
+
+</body>
+</html>
